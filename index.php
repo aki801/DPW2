@@ -1,3 +1,76 @@
+<?php /* Ininicio de un código en php */
+
+    error_reporting(E_ALL);
+
+    /* Accedemos a la BD */
+    $server = "localhost";
+    $user = "cuhrtcom_jamini";
+    $pass = "jsmini2015";
+    $db = "cuhrtcom_jsmini";
+    $n = 0; /* número de asistentes registrados */
+    $ntotal = 30; /* número total de asistentes */
+    $notificacion = "";
+
+    $conn = new mysqli($server, $user, $pass, $db);
+    if($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    if(isset($_GET['email'])) {
+        $nombre = $_GET['nombre'];
+        $email = $_GET['email'];
+
+        /* Se prepara mensaje de aviso de quienes se registran */
+        $destino = "rictor@cuhrt.com";
+        $subject = "Registro a Javascripting-mini";
+        $mensaje = $nombre . "\n". $email;
+        $header = "From: rictor@cuhrt.com"; /*direccion de correo de quien envia*/
+
+        /* Hay que ver si el email a registrar ya está registrado */
+        $sql = "SELECT * FROM Asistente WHERE email='$email'";
+        $irow = $conn->query($sql);
+        if($irow->num_rows > 0) {
+            /* Si el email ya está registrada, sólo damos aviso y no hacemos nada más */
+            $notificacion = "¡$nombre ya se encuentra registrado(a) para el evento, te esperamos!";
+        } else {
+            /* si el email no está registrada, pos se registra */
+            $sql = "INSERT INTO Asistente (`id`, `nombre`, `email`) values (NULL,'$nombre', '$email')";
+            $irow = $conn->query($sql);
+            if($irow) {
+                $notificacion = "¡Su registro se ha realizado con éxito!";
+
+                /* Este email se envía para notificar que este usuario se está registrando */
+                $r = mail($destino, $subject, $mensaje, $header);
+                /* Hay que determinar si el mensaje con mail() se envió de forma correcta */
+                if($r == FALSE) { /* Tenemos error al enviar el mensaje? */
+                    $notificacion = "Ha habido un problema con la notificación del registro, pero su registro se ha realizado de forma correcta. Envíe un mensaje a los organizadores, gracias!";
+                }
+
+                /* Este email se envía para notifcar al usuario que ya está registrando en la BD */
+                $mensajeu = "Hola ".$nombre."\n\nTu registro se a realizado con éxito al taller de Javascripting-mini que se llevará a cabo el día lunes 24 de agosto del 2015 de 10:00 a 14:00 hrs.\n\n Para más información visita el sitio web http://javascripting-mini.cuhrt.com o escribe a:\n rictor@cuhrt.com, kairy159@gmail.com o tallerescomunitarios@fch.org.mx\n\nEsperamos contar con tu asistencia.\n\nAtte: Javascripting-mini";
+
+                mail($email, $subject , $mensajeu, $header);
+                /* Hay que determinar si el mensaje con mail() se envió de forma correcta */
+                if($r == FALSE) { /* Tenemos error al enviar el mensaje? */
+                    $notificacion = "Ha habido un problema con la notificación del registro, pero su registro se ha realizado de forma correcta. Envíe un mensaje a los organizadores, gracias!";
+                }
+            } else {
+                $notificacion = "¡Hay un problema con sus registro, intente de nuevo o notifique a los organizadores. Gracias!";
+            }
+        }
+
+    }
+
+    /* Se cuentan cuantos registros hay */
+    $sql = "SELECT count(*) from Asistente";
+    $irow = $conn->query($sql);
+    if($irow) {
+        $row = $irow->fetch_row();
+        $n = $row[0];
+    }
+    $conn->close();
+
+?>
 
 <!DOCTYPE HTML>
 <!--

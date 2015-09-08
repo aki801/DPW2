@@ -4,9 +4,9 @@
 
     /* Accedemos a la BD */
     $server = "localhost";
-    $user = "cuhrtcom_jamini";
-    $pass = "jsmini2015";
-    $db = "cuhrtcom_jsmini";
+    $user = "tdw2015i";
+    $pass = "Tdw2009350619+";
+    $db = "tdw2015i";
     $n = 0; /* número de asistentes registrados */
     $ntotal = 30; /* número total de asistentes */
     $notificacion = "";
@@ -93,29 +93,11 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">Avisos</a></h1>
+					<h1 id="logo"><a href="index.php">Home</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#">Layouts</a>
-								<ul>
-									<li><a href="left-sidebar.html">Barra izquierda</a></li>
-									<li><a href="right-sidebar.html">Barra derecha</a></li>
-									<li><a href="no-sidebar.html">Sin barra</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option 1</a></li>
-											<li><a href="#">Option 2</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
 							<li><a href="ubicacion.html">Ubicación</a></li>
-							<li><a href="#" class="button special">Registro</a></li>
+							<li><a href="#six" class="button special">Registro</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -127,7 +109,7 @@
 							<h2>Diseño Web 2.0</h2>
 							<p>Sigue desarrollando tus habiliades para crear paginas web.</p>
 						</header>
-						<span class="image"><img src="images/response-plantila-html-170.jpg" alt="" /></span>
+						<span class="image"><img src="images/i_see_html_by_dbestarchitect-170.jpg" alt="" /></span>
 					</div>
 					<a href="#onedes" class="goto-next scrolly">Next</a>
 				</section>
@@ -135,7 +117,7 @@
         
             <!--one descrip-->
                <section id="onedes" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+					<span class="image fit main bottom"><img src="images/css-html-love.jpg" alt="" /></span>
 					<div class="content">
 					    <header>
 						    <h2>Programación con Javasciprt y PHP</h2>
@@ -182,7 +164,7 @@
 
 			<!-- Two descripcion -->
 				<section id="twodes" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+					<span class="image fit main"><img src="images/database-top.jpg" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Bases de datos con PHP o Python</h2>
@@ -200,139 +182,7 @@
                            <div class="row">
 								<div class="12u 12u$(medium)">
 									<header>
-										<h2>Algunos de los temas a abarcar son: </h2>
-									</header>
-								</div>
-								<div class="6u 12u$(medium)">
-									<ul>
-                                        <li>Instalación (antes que nada)</li>
-                                        <li>Aprendiendo a ser organizados (Creando una base de datos)</li>
-                                        <li>Creando la llave maestra (usuario y claves)</li>
-                                        <li>Tipos de datos (¿puedo guardar todo lo que quiera?</li>
-                                    </ul>
-								</div>
-								<div class="6u$ 12u$(medium)">
-								<ul>
-                                        <li> Organización de 2do nivel (Tabla, tabla y más tabla!)</li>
-                                        <li>Poblando la tierra (y sin tener una gota de sexo)</li>
-                                        <li>Erradicación total (obteniendo y filtrando información)</li>
-                                </ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#threedes" class="goto-next scrolly">Next</a>
-				</section>
-
-			<!-- Three descripcion -->
-				<section id="threedes" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Automatización de sitios web</h2>
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
-				
-				<!--Three lista-->
-				<section id="three" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-                           <div class="row">
-								<div class="12u 12u$(medium)">
-									<header>
-										<h2>Algunos de los temas a abarcar son: </h2>
-									</header>
-								</div>
-								<div class="6u 12u$(medium)">
-									<ul>
-                                        <li>Instalación (antes que nada)</li>
-                                        <li>Aprendiendo a ser organizados (Creando una base de datos)</li>
-                                        <li>Creando la llave maestra (usuario y claves)</li>
-                                        <li>Tipos de datos (¿puedo guardar todo lo que quiera?</li>
-                                    </ul>
-								</div>
-								<div class="6u$ 12u$(medium)">
-								<ul>
-                                        <li> Organización de 2do nivel (Tabla, tabla y más tabla!)</li>
-                                        <li>Poblando la tierra (y sin tener una gota de sexo)</li>
-                                        <li>Erradicación total (obteniendo y filtrando información)</li>
-                                </ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#fourdes" class="goto-next scrolly">Next</a>
-				</section>
-				
-<!-- Four descripcion -->
-				<section id="fourdes" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Creación de sitios web responsivos</h2>
-						</header>
-						<p>Conocerás los conceptos básicos de una base de datos, ¿qué es? ¿cómo se come? ¿cómo se cocina? ¿cómo podemos hacer una base de datos sabrosa?. Al igual que con la programación realizarás bases de datos que guarden el "Hola mundo!" hasta unas un poquitín más complejas.</p>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
-				
-				<!-- four temas -->
-				<section id="four" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-                           <div class="row">
-								<div class="12u 12u$(medium)">
-									<header>
-										<h2>Algunos de los temas a abarcar son: </h2>
-									</header>
-								</div>
-								<div class="6u 12u$(medium)">
-									<ul>
-                                        <li>Instalación (antes que nada)</li>
-                                        <li>Aprendiendo a ser organizados (Creando una base de datos)</li>
-                                        <li>Creando la llave maestra (usuario y claves)</li>
-                                        <li>Tipos de datos (¿puedo guardar todo lo que quiera?</li>
-                                    </ul>
-								</div>
-								<div class="6u$ 12u$(medium)">
-								<ul>
-                                        <li> Organización de 2do nivel (Tabla, tabla y más tabla!)</li>
-                                        <li>Poblando la tierra (y sin tener una gota de sexo)</li>
-                                        <li>Erradicación total (obteniendo y filtrando información)</li>
-                                </ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#fivedes" class="goto-next scrolly">Next</a>
-				</section>
-
-        <!-- Five descripcion -->
-				<section id="fivedes" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Uso de frameworks Bootstrap + Skel + AngularJS</h2>
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-					</div>
-					<a href="#five" class="goto-next scrolly">Next</a>
-				</section>
-				
-				<!--Five lista-->
-				<section id="five" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-                           <div class="row">
-								<div class="12u 12u$(medium)">
-									<header>
-										<h2>Algunos de los temas a abarcar son: </h2>
+										<h2>Algunos de los temas a abarcar en bases de datos son: </h2>
 									</header>
 								</div>
 								<div class="6u 12u$(medium)">
@@ -355,6 +205,8 @@
 					</div>
 					<a href="#six" class="goto-next scrolly">Next</a>
 				</section>
+
+			
 			<!-- Six -->
 				<section id="six" class="wrapper style2 special fade">
 				<h2><i class="fa fa-pencil-square-o fa-3x"></i>Registro</h2>

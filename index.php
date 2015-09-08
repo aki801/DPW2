@@ -127,7 +127,7 @@
 							<h2>Diseño Web 2.0</h2>
 							<p>Sigue desarrollando tus habiliades para crear paginas web.</p>
 						</header>
-						<span class="image"><img src="images/response-plantila-gratis-html.jpg" alt="" /></span>
+						<span class="image"><img src="images/response-plantila-html-170.jpg" alt="" /></span>
 					</div>
 					<a href="#onedes" class="goto-next scrolly">Next</a>
 				</section>
